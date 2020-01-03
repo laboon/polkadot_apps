@@ -13,7 +13,7 @@ const{ ApiPromise, WsProvider, Keyring } = require('@polkadot/api');
 
     // replace with your own mnemonic phrase
     // NOTE: very dangerous to leave this in plain sight!
-    const PHRASE = 'crystal weasel battle negative siren zoo mesh race replace discover clock fox';
+    const PHRASE = '';
 
     const user = keyring.addFromUri(PHRASE);
 
@@ -25,13 +25,20 @@ const{ ApiPromise, WsProvider, Keyring } = require('@polkadot/api');
     // Read in argument for the address
     let addr = process.argv[2];
 
-    // Sign and send a transfer from Alice to Bob
-    const txHash = await api.tx.balances
-	  .transfer("Eowspt1aYdoEmqACLD6wJVNHbAn4FiP3efNRUF9ExhWGxky", 1000000)
-	  .signAndSend(user);
+    const unsub = await api.tx.balances
+	  .transfer("Eowspt1aYdoEmqACLD6wJVNHbAn4FiP3efNRUF9ExhWGxky", 111111111)
+	  .signAndSend(user, ({ events = [], status }) => {
+	      console.log(`Current status is ${status.type}`);
 
-    // Show the hash
-    console.log(`Submitted with hash ${txHash}`);
+	      if (status.isFinalized) {
+		  console.log(`Transaction included at blockHash ${status.asFinalized}`);
 
-    // process.exit()
+		  events.forEach(({ phase, event: { data, method, section } }) => {
+		      console.log(`\t' ${phase}: ${section}.${method}:: ${data}`);
+		  });
+
+		  unsub();
+	      }
+	  });
+
 })()

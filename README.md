@@ -46,6 +46,8 @@ See [`account_watcher.js`](account_watcher.js)
 
 See [`tx.js`](tx.js)
 
+See [`better_tx.js`](better_tx.js)
+
 ## A More Complex Script
 
 See [`Anson Lau's Validator Stats script`](https://github.com/ansonla3/kusama-validator-stats)
