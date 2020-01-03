@@ -58,3 +58,4 @@ See [`Anson Lau's Validator Stats script`](https://github.com/ansonla3/kusama-va
 1. Start programming the UI [https://polkadot.js.org/ui/start/](https://polkadot.js.org/ui/start/)
 1. polkadot.js source and links to other tutorials: [https://github.com/polkadot-js/apps](https://github.com/polkadot-js/apps)
 1. Various CLI tools to help your development [https://github.com/polkadot-js/tools](https://github.com/polkadot-js/tools)
+1. Dealing with types, enums, structs, etc. [https://polkadot.js.org/api/start/types.basics.html](https://polkadot.js.org/api/start/types.basics.html)
