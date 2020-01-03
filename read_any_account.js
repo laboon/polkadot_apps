@@ -12,7 +12,7 @@ const{ ApiPromise, WsProvider } = require('@polkadot/api');
 
     const balance = await api.query.balances.freeBalance(addr);
 
-    console.log(`${addr} has ${balance / DOT_DECIMAL_PLACES} KSM `);
+    console.log(`${addr} has ${balance / DOT_DECIMAL_PLACES} KSM ( ${balance} raw )`);
 
     process.exit()
 })()
