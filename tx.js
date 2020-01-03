@@ -13,7 +13,7 @@ const{ ApiPromise, WsProvider, Keyring } = require('@polkadot/api');
 
     // replace with your own mnemonic phrase
     // NOTE: very dangerous to leave this in plain sight!
-    const PHRASE = 'crystal weasel battle negative siren zoo mesh race replace discover clock fox';
+    const PHRASE = '';
 
     const user = keyring.addFromUri(PHRASE);
 
