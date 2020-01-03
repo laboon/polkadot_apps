@@ -1,3 +1,9 @@
+# Emacs backups
+*~
+
+# Lock files
+*.lock
+
 # Logs
 logs
 *.log

@@ -1,20 +1,18 @@
+const DOT_DECIMAL_PLACES = 1000000000000;
+
 const{ ApiPromise, WsProvider } = require('@polkadot/api');
 
-// We must wrap everything up in an async block
 (async () => {
+
+    let addr = process.argv[2];
 
     // Connect to a node (this is a public one)
     const provider = new WsProvider('wss://kusama-rpc.polkadot.io/')
     const api = await ApiPromise.create({ provider })
 
-    // Make a call to the chain and get its name.
+    const balance = await api.query.balances.freeBalance(addr);
 
-    const chain = await api.rpc.system.chain();
+    console.log(`${addr} has ${balance / DOT_DECIMAL_PLACES} KSM `);
 
-    // Print out the chain to which we connected.
-
-    console.log(`You are connected to ${chain} !`);
-
-    // Exit the process.
     process.exit()
 })()
