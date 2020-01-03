@@ -42,9 +42,9 @@ See [`display_data.js`](display_data.js)
 
 See [`account_watcher.js`](account_watcher.js)
 
-## Subscribing to Multiple Events
+## Transactions
 
-See [`multiple_descriptions.js`](multiple_descriptions.js)
+See [`tx.js`](tx.js)
 
 ## A More Complex Script
 
@@ -55,3 +55,4 @@ See [`Anson Lau's Validator Stats script`](https://github.com/ansonla3/kusama-va
 1. Dig into the API [https://polkadot.js.org/api/](https://polkadot.js.org/api/)
 1. Start programming the UI [https://polkadot.js.org/ui/start/](https://polkadot.js.org/ui/start/)
 1. polkadot.js source and links to other tutorials: [https://github.com/polkadot-js/apps](https://github.com/polkadot-js/apps)
+1. Various CLI tools to help your development [https://github.com/polkadot-js/tools](https://github.com/polkadot-js/tools)

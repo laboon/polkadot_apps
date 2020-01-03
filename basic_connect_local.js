@@ -1,5 +1,10 @@
-const{ ApiPromise, WsProvider } = require('@polkadot/api');
+// NOTE: If this does not work, be sure you have websockets
+// open and rpc-cors set to all when running your local
+// polkadot instance
+// ./target/release/polkadot --ws-port 9944 --ws-external  --rpc-cors="all"
+// For details, see https://github.com/paritytech/polkadot/issues/588
 
+const{ ApiPromise, WsProvider } = require('@polkadot/api');
 
 (async () => {
     // Note the change to local provider here
